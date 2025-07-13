@@ -107,3 +107,13 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
+.about-box {
+  background: #fff3cd;
+  border: 2px solid #ffa94d;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 4px 4px 0px #ff595e;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}

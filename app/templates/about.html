@@ -3,9 +3,16 @@
 {% block title %}About – Curated Recipes{% endblock %}
 
 {% block content %}
-  <h1 class="mb-3 text-center">About This Project</h1>
-  <p class="lead text-center">This recipe generator was a kind of selfish endeavor, but maybe others would find it useful too!</p>
-  <p class="text-center">Each recipe is curated from a personal collection and organized by meal type — breakfast, lunch, dinner, and snacks.</p>
-  <p class="text-center">It randomly pulls a recipe from a Google Sheet every time you click, helping reduce choice paralysis and make meal planning a little more fun!</p>
-  <p class="text-muted text-center mt-4">Made with Flask + Bootstrap</p>
+  <div class="about-box mx-auto" style="max-width: 700px;">
+    <h1 class="text-center mb-4">📚 About This Project</h1>
+
+    <p>👋 Hey there! I'm Katie (@ohitsmekatie), and this little site is a way to get recipes without endless scrolling. It's also a way for my friends and I to create a shared database of recipes we love.</p>
+
+    <p>📋 Every recipe is pulled from a curated list in a shared Google Sheet. You can add to the sheet directly or submit a recipe with a link from the "Add a recipe" section of the site.</p>
+
+    <p>🎲 Use the generator to get a random recipe by meal type (breakfast, lunch, dinner, snacks).</p>
+
+    <p>🧪 Built w/ Flask</p>
+
+  </div>
 {% endblock %}
