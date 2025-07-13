@@ -1,0 +1,109 @@
+/* Post-Modern Recipe Generator Styles */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #fefefe;
+  color: #1c1c1c;
+  margin: 0;
+  padding: 0;
+}
+
+/* Typography */
+h1, .navbar-brand, .nav-link, footer {
+  font-family: 'Bungee', cursive;
+}
+
+h1 {
+  color: #ff4c81;
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+/* Navigation */
+nav.navbar {
+  background: #ffe156;
+  border-bottom: 4px solid #ff595e;
+}
+
+.navbar-brand {
+  color: #ff4c81 !important;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.nav-link {
+  color: #1c1c1c !important;
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* Buttons */
+.recipe-btn {
+  background-color: #7ec4cf;
+  color: #000;
+  border: 2px solid #3a86ff;
+  padding: 0.5rem 1.25rem;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+  border-radius: 0;
+  box-shadow: 2px 2px 0px #000;
+}
+
+.recipe-btn:hover {
+  background-color: #3a86ff;
+  color: #fff;
+  box-shadow: 2px 2px 0px #111;
+}
+
+.recipe-btn.active {
+  background-color: #ffbe0b;
+  color: #000;
+  border-color: #fb5607;
+  box-shadow: none;
+}
+
+/* Result area */
+#result {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+
+/* Main content container */
+main {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Footer */
+footer {
+  background: #ffe156;
+  color: #333;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 4px solid #ff595e;
+  letter-spacing: 0.5px;
+}
+
+footer a {
+  color: #ff4c81;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}

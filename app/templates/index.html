@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Curated Recipes{% endblock %}
+
+{% block content %}
+  <h1 class="mb-3 text-center">🍽️ Random Recipe Generator</h1>
+  <p class="text-center">Select a meal type and it will return a random recipe from my curated sheet.</p>
+
+  <div class="d-flex justify-content-center flex-wrap gap-2 my-4">
+    <button class="btn btn-outline-dark recipe-btn" onclick="generate('breakfast')">Breakfast</button>
+    <button class="btn btn-outline-dark recipe-btn" onclick="generate('lunch')">Lunch</button>
+    <button class="btn btn-outline-dark recipe-btn" onclick="generate('dinner')">Dinner</button>
+    <button class="btn btn-outline-dark recipe-btn" onclick="generate('snacks')">Snacks</button>
+  </div>
+
+  <div id="result" class="text-center mt-4"></div>
+
+  <script>
+    async function generate(meal) {
+      const buttons = document.querySelectorAll(".recipe-btn");
+      buttons.forEach(btn => btn.classList.remove("active"));
+
+      const res = await fetch(`/generate?meal=${meal}`);
+      const data = await res.json();
+      document.getElementById("result").innerHTML = `
+        <h3>${data.name}</h3>
+        <a href="${data.link}" target="_blank">${data.link}</a>
+      `;
+
+      const clickedButton = [...buttons].find(btn => btn.textContent.toLowerCase() === meal);
+      if (clickedButton) {
+        clickedButton.classList.add("active");
+      }
+    }
+  </script>
+{% endblock %}
+
